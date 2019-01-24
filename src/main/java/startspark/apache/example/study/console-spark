@@ -1,0 +1,185 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/01/24 13:38:12 INFO SparkContext: Running Spark version 2.4.0
+19/01/24 13:38:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/01/24 13:38:13 INFO SparkContext: Submitted application: RDDWordCount
+19/01/24 13:38:13 INFO SecurityManager: Changing view acls to: wolf
+19/01/24 13:38:13 INFO SecurityManager: Changing modify acls to: wolf
+19/01/24 13:38:13 INFO SecurityManager: Changing view acls groups to: 
+19/01/24 13:38:13 INFO SecurityManager: Changing modify acls groups to: 
+19/01/24 13:38:13 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(wolf); groups with view permissions: Set(); users  with modify permissions: Set(wolf); groups with modify permissions: Set()
+19/01/24 13:38:14 INFO Utils: Successfully started service 'sparkDriver' on port 56164.
+19/01/24 13:38:14 INFO SparkEnv: Registering MapOutputTracker
+19/01/24 13:38:14 INFO SparkEnv: Registering BlockManagerMaster
+19/01/24 13:38:14 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/01/24 13:38:14 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/01/24 13:38:14 INFO DiskBlockManager: Created local directory at C:\Users\wolf\AppData\Local\Temp\blockmgr-d06aa1f8-e536-418f-90dd-811eb1c17120
+19/01/24 13:38:14 INFO MemoryStore: MemoryStore started with capacity 870.9 MB
+19/01/24 13:38:14 INFO SparkEnv: Registering OutputCommitCoordinator
+19/01/24 13:38:14 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/01/24 13:38:14 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://FANG.mshome.net:4040
+19/01/24 13:38:15 INFO Executor: Starting executor ID driver on host localhost
+19/01/24 13:38:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56173.
+19/01/24 13:38:15 INFO NettyBlockTransferService: Server created on FANG.mshome.net:56173
+19/01/24 13:38:15 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/01/24 13:38:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, FANG.mshome.net, 56173, None)
+19/01/24 13:38:15 INFO BlockManagerMasterEndpoint: Registering block manager FANG.mshome.net:56173 with 870.9 MB RAM, BlockManagerId(driver, FANG.mshome.net, 56173, None)
+19/01/24 13:38:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, FANG.mshome.net, 56173, None)
+19/01/24 13:38:15 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, FANG.mshome.net, 56173, None)
+19/01/24 13:38:16 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 214.6 KB, free 870.7 MB)
+19/01/24 13:38:16 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.4 KB, free 870.7 MB)
+19/01/24 13:38:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on FANG.mshome.net:56173 (size: 20.4 KB, free: 870.9 MB)
+19/01/24 13:38:16 INFO SparkContext: Created broadcast 0 from textFile at RDDWordCount.java:37
+19/01/24 13:38:16 INFO FileInputFormat: Total input paths to process : 1
+19/01/24 13:38:17 INFO SparkContext: Starting job: collect at RDDWordCount.java:47
+19/01/24 13:38:17 INFO DAGScheduler: Registering RDD 3 (mapToPair at RDDWordCount.java:43)
+19/01/24 13:38:17 INFO DAGScheduler: Got job 0 (collect at RDDWordCount.java:47) with 2 output partitions
+19/01/24 13:38:17 INFO DAGScheduler: Final stage: ResultStage 1 (collect at RDDWordCount.java:47)
+19/01/24 13:38:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+19/01/24 13:38:17 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+19/01/24 13:38:17 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at mapToPair at RDDWordCount.java:43), which has no missing parents
+19/01/24 13:38:17 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 6.2 KB, free 870.7 MB)
+19/01/24 13:38:17 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.5 KB, free 870.7 MB)
+19/01/24 13:38:17 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on FANG.mshome.net:56173 (size: 3.5 KB, free: 870.9 MB)
+19/01/24 13:38:17 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+19/01/24 13:38:17 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at mapToPair at RDDWordCount.java:43) (first 15 tasks are for partitions Vector(0, 1))
+19/01/24 13:38:17 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+19/01/24 13:38:17 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+19/01/24 13:38:17 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/01/24 13:38:17 INFO HadoopRDD: Input split: file:/C:/Users/wolf/IdeaProjects/startspark/README.md:0+39474
+19/01/24 13:38:17 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1071 bytes result sent to driver
+19/01/24 13:38:17 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+19/01/24 13:38:17 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+19/01/24 13:38:17 INFO HadoopRDD: Input split: file:/C:/Users/wolf/IdeaProjects/startspark/README.md:39474+39475
+19/01/24 13:38:17 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 546 ms on localhost (executor driver) (1/2)
+19/01/24 13:38:17 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1114 bytes result sent to driver
+19/01/24 13:38:17 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 125 ms on localhost (executor driver) (2/2)
+19/01/24 13:38:17 INFO DAGScheduler: ShuffleMapStage 0 (mapToPair at RDDWordCount.java:43) finished in 0.764 s
+19/01/24 13:38:17 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/01/24 13:38:17 INFO DAGScheduler: looking for newly runnable stages
+19/01/24 13:38:17 INFO DAGScheduler: running: Set()
+19/01/24 13:38:17 INFO DAGScheduler: waiting: Set(ResultStage 1)
+19/01/24 13:38:17 INFO DAGScheduler: failed: Set()
+19/01/24 13:38:17 INFO DAGScheduler: Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at RDDWordCount.java:44), which has no missing parents
+19/01/24 13:38:17 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.8 KB, free 870.7 MB)
+19/01/24 13:38:17 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.2 KB, free 870.7 MB)
+19/01/24 13:38:17 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on FANG.mshome.net:56173 (size: 2.2 KB, free: 870.9 MB)
+19/01/24 13:38:17 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1161
+19/01/24 13:38:17 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at RDDWordCount.java:44) (first 15 tasks are for partitions Vector(0, 1))
+19/01/24 13:38:17 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+19/01/24 13:38:17 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, executor driver, partition 0, ANY, 7662 bytes)
+19/01/24 13:38:17 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+19/01/24 13:38:17 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 2 local blocks and 0 remote blocks
+19/01/24 13:38:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 15 ms
+19/01/24 13:38:18 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 30650 bytes result sent to driver
+19/01/24 13:38:18 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, executor driver, partition 1, ANY, 7662 bytes)
+19/01/24 13:38:18 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+19/01/24 13:38:18 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 2 local blocks and 0 remote blocks
+19/01/24 13:38:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/01/24 13:38:18 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 156 ms on localhost (executor driver) (1/2)
+19/01/24 13:38:18 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 32702 bytes result sent to driver
+19/01/24 13:38:18 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 78 ms on localhost (executor driver) (2/2)
+19/01/24 13:38:18 INFO DAGScheduler: ResultStage 1 (collect at RDDWordCount.java:47) finished in 0.219 s
+19/01/24 13:38:18 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+19/01/24 13:38:18 INFO DAGScheduler: Job 0 finished: collect at RDDWordCount.java:47, took 1.087988 s
+Display Count output
+
+******output not included
+
+Done displaying output
+19/01/24 13:38:18 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+19/01/24 13:38:18 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/01/24 13:38:18 INFO SparkContext: Starting job: runJob at SparkHadoopWriter.scala:78
+19/01/24 13:38:18 INFO DAGScheduler: Got job 1 (runJob at SparkHadoopWriter.scala:78) with 2 output partitions
+19/01/24 13:38:18 INFO DAGScheduler: Final stage: ResultStage 3 (runJob at SparkHadoopWriter.scala:78)
+19/01/24 13:38:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+19/01/24 13:38:18 INFO DAGScheduler: Missing parents: List()
+19/01/24 13:38:18 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[5] at saveAsTextFile at RDDWordCount.java:55), which has no missing parents
+19/01/24 13:38:18 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 66.3 KB, free 870.6 MB)
+19/01/24 13:38:18 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 23.9 KB, free 870.6 MB)
+19/01/24 13:38:18 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on FANG.mshome.net:56173 (size: 23.9 KB, free: 870.9 MB)
+19/01/24 13:38:18 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+19/01/24 13:38:18 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[5] at saveAsTextFile at RDDWordCount.java:55) (first 15 tasks are for partitions Vector(0, 1))
+19/01/24 13:38:18 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+19/01/24 13:38:18 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 4, localhost, executor driver, partition 0, ANY, 7662 bytes)
+19/01/24 13:38:18 INFO Executor: Running task 0.0 in stage 3.0 (TID 4)
+19/01/24 13:38:18 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 2 local blocks and 0 remote blocks
+19/01/24 13:38:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+19/01/24 13:38:18 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 41
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 26
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 35
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 15
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 20
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 47
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 48
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 9
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 4
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 44
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 46
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 5
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 0
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 1
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 24
+19/01/24 13:38:18 INFO BlockManagerInfo: Removed broadcast_2_piece0 on FANG.mshome.net:56173 in memory (size: 2.2 KB, free: 870.9 MB)
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 12
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 32
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 21
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 14
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 33
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 13
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 42
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 34
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 36
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 16
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 19
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 23
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 28
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 38
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 17
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 43
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 2
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 18
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 11
+19/01/24 13:38:18 INFO BlockManagerInfo: Removed broadcast_1_piece0 on FANG.mshome.net:56173 in memory (size: 3.5 KB, free: 870.9 MB)
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 8
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 49
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 39
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 22
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 10
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 30
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 31
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 7
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 29
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 6
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 3
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 45
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 25
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 37
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 40
+19/01/24 13:38:18 INFO ContextCleaner: Cleaned accumulator 27
+19/01/24 13:38:18 INFO FileOutputCommitter: Saved output of task 'attempt_20190124133818_0005_m_000000_0' to file:/C:/Users/wolf/IdeaProjects/startspark/RDDWordCountOutput/_temporary/0/task_20190124133818_0005_m_000000
+19/01/24 13:38:18 INFO SparkHadoopMapRedUtil: attempt_20190124133818_0005_m_000000_0: Committed
+19/01/24 13:38:18 INFO Executor: Finished task 0.0 in stage 3.0 (TID 4). 1502 bytes result sent to driver
+19/01/24 13:38:18 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 5, localhost, executor driver, partition 1, ANY, 7662 bytes)
+19/01/24 13:38:18 INFO Executor: Running task 1.0 in stage 3.0 (TID 5)
+19/01/24 13:38:18 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 4) in 227 ms on localhost (executor driver) (1/2)
+19/01/24 13:38:18 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 2 local blocks and 0 remote blocks
+19/01/24 13:38:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/01/24 13:38:18 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+19/01/24 13:38:18 INFO FileOutputCommitter: Saved output of task 'attempt_20190124133818_0005_m_000001_0' to file:/C:/Users/wolf/IdeaProjects/startspark/RDDWordCountOutput/_temporary/0/task_20190124133818_0005_m_000001
+19/01/24 13:38:18 INFO SparkHadoopMapRedUtil: attempt_20190124133818_0005_m_000001_0: Committed
+19/01/24 13:38:18 INFO Executor: Finished task 1.0 in stage 3.0 (TID 5). 1459 bytes result sent to driver
+19/01/24 13:38:18 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 5) in 110 ms on localhost (executor driver) (2/2)
+19/01/24 13:38:18 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+19/01/24 13:38:18 INFO DAGScheduler: ResultStage 3 (runJob at SparkHadoopWriter.scala:78) finished in 0.430 s
+19/01/24 13:38:18 INFO DAGScheduler: Job 1 finished: runJob at SparkHadoopWriter.scala:78, took 0.438740 s
+19/01/24 13:38:18 INFO SparkHadoopWriter: Job job_20190124133818_0005 committed.
+19/01/24 13:38:18 INFO SparkUI: Stopped Spark web UI at http://FANG.mshome.net:4040
+19/01/24 13:38:18 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/01/24 13:38:18 INFO MemoryStore: MemoryStore cleared
+19/01/24 13:38:18 INFO BlockManager: BlockManager stopped
+19/01/24 13:38:18 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/01/24 13:38:18 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/01/24 13:38:18 INFO SparkContext: Successfully stopped SparkContext
+19/01/24 13:38:18 INFO ShutdownHookManager: Shutdown hook called
+19/01/24 13:38:18 INFO ShutdownHookManager: Deleting directory C:\Users\wolf\AppData\Local\Temp\spark-168d21ce-6a42-4e8f-b397-12f51cfa098a
