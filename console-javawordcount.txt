@@ -1,0 +1,92 @@
+19/01/23 14:40:27 INFO SparkContext: Running Spark version 2.4.0
+19/01/23 14:40:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/01/23 14:40:28 INFO SparkContext: Submitted application: SimpleSpark
+19/01/23 14:40:29 INFO SecurityManager: Changing view acls to: wolf
+19/01/23 14:40:29 INFO SecurityManager: Changing modify acls to: wolf
+19/01/23 14:40:29 INFO SecurityManager: Changing view acls groups to: 
+19/01/23 14:40:29 INFO SecurityManager: Changing modify acls groups to: 
+19/01/23 14:40:29 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(wolf); groups with view permissions: Set(); users  with modify permissions: Set(wolf); groups with modify permissions: Set()
+19/01/23 14:40:30 INFO Utils: Successfully started service 'sparkDriver' on port 52343.
+19/01/23 14:40:30 INFO SparkEnv: Registering MapOutputTracker
+19/01/23 14:40:30 INFO SparkEnv: Registering BlockManagerMaster
+19/01/23 14:40:30 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/01/23 14:40:30 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/01/23 14:40:30 INFO DiskBlockManager: Created local directory at C:\Users\wolf\AppData\Local\Temp\blockmgr-dcd1257f-8df5-40d8-9fb0-a3e524a5f73c
+19/01/23 14:40:30 INFO MemoryStore: MemoryStore started with capacity 870.9 MB
+19/01/23 14:40:30 INFO SparkEnv: Registering OutputCommitCoordinator
+19/01/23 14:40:30 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/01/23 14:40:30 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://FANG.mshome.net:4040
+19/01/23 14:40:30 INFO Executor: Starting executor ID driver on host localhost
+19/01/23 14:40:30 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 52352.
+19/01/23 14:40:30 INFO NettyBlockTransferService: Server created on FANG.mshome.net:52352
+19/01/23 14:40:30 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/01/23 14:40:30 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, FANG.mshome.net, 52352, None)
+19/01/23 14:40:30 INFO BlockManagerMasterEndpoint: Registering block manager FANG.mshome.net:52352 with 870.9 MB RAM, BlockManagerId(driver, FANG.mshome.net, 52352, None)
+19/01/23 14:40:30 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, FANG.mshome.net, 52352, None)
+19/01/23 14:40:30 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, FANG.mshome.net, 52352, None)
+19/01/23 14:40:31 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Users/wolf/IdeaProjects/startspark/spark-warehouse').
+19/01/23 14:40:31 INFO SharedState: Warehouse path is 'file:/C:/Users/wolf/IdeaProjects/startspark/spark-warehouse'.
+19/01/23 14:40:32 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+19/01/23 14:40:35 INFO FileSourceStrategy: Pruning directories with: 
+19/01/23 14:40:35 INFO FileSourceStrategy: Post-Scan Filters: 
+19/01/23 14:40:35 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+19/01/23 14:40:35 INFO FileSourceScanExec: Pushed Filters: 
+19/01/23 14:40:35 INFO CodeGenerator: Code generated in 461.283227 ms
+19/01/23 14:40:36 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 219.9 KB, free 870.7 MB)
+19/01/23 14:40:36 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.6 KB, free 870.7 MB)
+19/01/23 14:40:36 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on FANG.mshome.net:52352 (size: 20.6 KB, free: 870.9 MB)
+19/01/23 14:40:36 INFO SparkContext: Created broadcast 0 from javaRDD at JavaWordCount.java:59
+19/01/23 14:40:36 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4273253 bytes, open cost is considered as scanning 4194304 bytes.
+19/01/23 14:40:36 INFO SparkContext: Starting job: collect at JavaWordCount.java:67
+19/01/23 14:40:36 INFO DAGScheduler: Registering RDD 5 (mapToPair at JavaWordCount.java:63)
+19/01/23 14:40:36 INFO DAGScheduler: Got job 0 (collect at JavaWordCount.java:67) with 1 output partitions
+19/01/23 14:40:36 INFO DAGScheduler: Final stage: ResultStage 1 (collect at JavaWordCount.java:67)
+19/01/23 14:40:36 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+19/01/23 14:40:36 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+19/01/23 14:40:36 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at mapToPair at JavaWordCount.java:63), which has no missing parents
+19/01/23 14:40:36 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 12.8 KB, free 870.7 MB)
+19/01/23 14:40:36 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.6 KB, free 870.6 MB)
+19/01/23 14:40:36 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on FANG.mshome.net:52352 (size: 6.6 KB, free: 870.9 MB)
+19/01/23 14:40:36 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+19/01/23 14:40:36 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at mapToPair at JavaWordCount.java:63) (first 15 tasks are for partitions Vector(0))
+19/01/23 14:40:36 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+19/01/23 14:40:36 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8322 bytes)
+19/01/23 14:40:36 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/01/23 14:40:36 INFO CodeGenerator: Code generated in 32.949799 ms
+19/01/23 14:40:36 INFO FileScanRDD: Reading File path: file:///C:/Users/wolf/IdeaProjects/startspark/README.md, range: 0-78949, partition values: [empty row]
+19/01/23 14:40:36 INFO CodeGenerator: Code generated in 50.193245 ms
+19/01/23 14:40:37 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1713 bytes result sent to driver
+19/01/23 14:40:37 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 726 ms on localhost (executor driver) (1/1)
+19/01/23 14:40:37 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/01/23 14:40:37 INFO DAGScheduler: ShuffleMapStage 0 (mapToPair at JavaWordCount.java:63) finished in 0.852 s
+19/01/23 14:40:37 INFO DAGScheduler: looking for newly runnable stages
+19/01/23 14:40:37 INFO DAGScheduler: running: Set()
+19/01/23 14:40:37 INFO DAGScheduler: waiting: Set(ResultStage 1)
+19/01/23 14:40:37 INFO DAGScheduler: failed: Set()
+19/01/23 14:40:37 INFO DAGScheduler: Submitting ResultStage 1 (ShuffledRDD[6] at reduceByKey at JavaWordCount.java:65), which has no missing parents
+19/01/23 14:40:37 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.8 KB, free 870.6 MB)
+19/01/23 14:40:37 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.2 KB, free 870.6 MB)
+19/01/23 14:40:37 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on FANG.mshome.net:52352 (size: 2.2 KB, free: 870.9 MB)
+19/01/23 14:40:37 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1161
+19/01/23 14:40:37 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[6] at reduceByKey at JavaWordCount.java:65) (first 15 tasks are for partitions Vector(0))
+19/01/23 14:40:37 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+19/01/23 14:40:37 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, ANY, 7662 bytes)
+19/01/23 14:40:37 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+19/01/23 14:40:37 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/01/23 14:40:37 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 16 ms
+19/01/23 14:40:37 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 62192 bytes result sent to driver
+19/01/23 14:40:37 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 125 ms on localhost (executor driver) (1/1)
+19/01/23 14:40:37 INFO DAGScheduler: ResultStage 1 (collect at JavaWordCount.java:67) finished in 0.156 s
+
+
+19/01/23 14:40:37 INFO SparkUI: Stopped Spark web UI at http://FANG.mshome.net:4040
+19/01/23 14:40:37 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/01/23 14:40:37 INFO MemoryStore: MemoryStore cleared
+19/01/23 14:40:37 INFO BlockManager: BlockManager stopped
+19/01/23 14:40:37 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/01/23 14:40:37 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/01/23 14:40:37 INFO SparkContext: Successfully stopped SparkContext
+19/01/23 14:40:37 INFO ShutdownHookManager: Shutdown hook called
+19/01/23 14:40:37 INFO ShutdownHookManager: Deleting directory C:\Users\wolf\AppData\Local\Temp\spark-a23fba46-a75f-4565-b9b9-17898b235d41
+
+
