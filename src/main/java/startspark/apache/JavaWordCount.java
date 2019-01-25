@@ -32,7 +32,7 @@ public final class JavaWordCount {
     private static final Pattern SPACE = Pattern.compile(" ");
 
     private static String dir = "C:\\Users\\wolf\\IdeaProjects\\startspark\\";
-    private static String name = "README.md";
+    private static String name = "SPARK_SOURCE1.md";
     private static String file = dir+name;
 
     public static void main(String[] args) throws Exception {

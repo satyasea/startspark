@@ -1,5 +1,12 @@
 package startspark.apache.example.study;
-
+/*
+This class is a prototype for building generic study examples from Spark web site
+https://spark.apache.org/examples.html
+The code is cobbled from a few other Spark examples and provides a spark context converted to a javasparkcontext
+Some renaming for clarity
+breaking down the single line code, unchaining anonymous objects into steps
+making objects type visible and using the objects directly.
+ */
 import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 import org.apache.spark.api.java.JavaPairRDD;
@@ -13,7 +20,7 @@ public class RDDWordCount {
 
     private static final Pattern SPACE = Pattern.compile(" ");
     private static String dir = "C:\\Users\\wolf\\IdeaProjects\\startspark\\";
-    private static String inputFile = "README.md";
+    private static String inputFile = "SPARK_SOURCE1.md";
     private static String inputURL = dir+inputFile;
     private static String outputFile = "RDDWordCountOutput";
     private static int numPartitionsInOutput = 2;
