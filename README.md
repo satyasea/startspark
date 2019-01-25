@@ -9,3 +9,12 @@ To show a simple way of looking at it, example/study/MapReduce is a Java program
 https://spark.apache.org/examples.html
 Intro From Apache web site:
 These examples give a quick overview of the Spark API. Spark is built on the concept of distributed datasets, which contain arbitrary Java or Python objects. You create a dataset from external data, then apply parallel operations to it. The building block of the Spark API is its RDD API. In the RDD API, there are two types of operations: transformations, which define a new dataset based on previous ones, and actions, which kick off a job to execute on a cluster. On top of Spark’s RDD API, high level APIs are provided, e.g. DataFrame API and Machine Learning API. These high level APIs provide a concise way to conduct certain data operations. In this page, we will show examples using RDD API as well as examples using high level APIs.
+
+
+To build other examples using example/study/RDDWordCount
+
+This class is a prototype for building generic study examples from Spark web site
+ cobbled from a few other Spark examples and provides a spark context converted to a javasparkcontext
+Some renaming for clarity
+breaking down the single line code, unchaining anonymous objects into steps
+making objects type visible and using the objects directly.
