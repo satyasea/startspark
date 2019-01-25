@@ -34,5 +34,11 @@ public class MapReduce {
             System.out.println(entry.getKey() + "/" + entry.getValue());
         }
 
+        /*
+        julie/2
+        bob/3
+        susan/1
+         */
+
     }
 }
