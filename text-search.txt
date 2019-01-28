@@ -1,0 +1,17 @@
+foo
+bar
+foo
+bar
+foobar bar
+foo
+foobar foo
+foo
+error foo
+foo
+error bar
+foo
+error foo
+bar
+bar
+foo
+error foo
