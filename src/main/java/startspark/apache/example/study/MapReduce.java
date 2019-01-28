@@ -10,7 +10,7 @@ public class MapReduce {
     public static void main(String args[]){
 
         //list of 6 entries
-        List<String> items = new ArrayList();
+        List<String> items = new ArrayList<>();
         items.add("bob");
         items.add("susan");
         items.add("julie");
@@ -19,7 +19,7 @@ public class MapReduce {
         items.add("julie");
 
         //map reduces list of six to 3 entries
-        Map<String, Integer> map = new HashMap();
+        Map<String, Integer> map = new HashMap<>();
         for(String s: items){
             if(map.containsKey(s)){
                 Integer i = map.get(s);
