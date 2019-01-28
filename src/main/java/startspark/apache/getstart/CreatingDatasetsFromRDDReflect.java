@@ -6,14 +6,10 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoder;
 import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.SparkSession;
-
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.Collections;
-
 import org.apache.spark.sql.Row;
 import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.function.Function;
+
 
 public class CreatingDatasetsFromRDDReflect {
 
@@ -25,10 +21,9 @@ public class CreatingDatasetsFromRDDReflect {
 
         SparkSession spark = SparkSession
                 .builder()
-                .appName("Create Data Frame Dataset from RDD")
+                .appName("Dataset from Class, RDD and SQL")
                 .config("spark.master", "local")
                 .getOrCreate();
-
 
         // Create an RDD of Person objects from a text file
         JavaRDD<Person> peopleRDD = spark.read()
@@ -42,31 +37,27 @@ public class CreatingDatasetsFromRDDReflect {
                     return person;
                 });
 
-
         // Apply a schema to an RDD of JavaBeans to get a DataFrame
         Dataset<Row> peopleDF = spark.createDataFrame(peopleRDD, Person.class);
         peopleDF.show();
-// Register the DataFrame as a temporary view
+        // Register the DataFrame as a temporary view
         peopleDF.createOrReplaceTempView("people");
-// SQL statements can be run by using the sql methods provided by spark
+        // SQL statements can be run by using the sql methods provided by spark
         Dataset<Row> teenagersDF = spark.sql("SELECT name FROM people WHERE age BETWEEN 13 AND 19");
         teenagersDF.show();
 
-// The columns of a row in the result can be accessed by field index
+        // The columns of a row in the result can be accessed by field index
         Encoder<String> stringEncoder = Encoders.STRING();
         Dataset<String> teenagerNamesByIndexDF = teenagersDF.map(
                 (MapFunction<Row, String>) row -> "Name: " + row.getString(0),
                 stringEncoder);
         teenagerNamesByIndexDF.show();
 
-
-
-// or by field name
+        // or by field name
         Dataset<String> teenagerNamesByFieldDF = teenagersDF.map(
                 (MapFunction<Row, String>) row -> "Name: " + row.<String>getAs("name"),
                 stringEncoder);
         teenagerNamesByFieldDF.show();
-
 
         spark.close();
     }
