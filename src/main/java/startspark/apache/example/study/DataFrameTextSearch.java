@@ -1,14 +1,6 @@
 
 package startspark.apache.example.study;
 
-/*
-This class is a prototype for building generic study examples from Spark web site
-https://spark.apache.org/examples.html
-The code is cobbled from a few other Spark examples and provides a spark context converted to a javasparkcontext
-Some renaming for clarity
-breaking down the single line code, unchaining anonymous objects into steps
-making objects type visible and using the objects directly.
- */
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.*;
 import org.apache.spark.sql.types.DataTypes;
@@ -21,7 +13,6 @@ import org.apache.spark.sql.SQLContext;
 import org.apache.spark.sql.SparkSession;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
 import static org.apache.spark.sql.functions.col;
 
 public class DataFrameTextSearch {
@@ -35,16 +26,17 @@ public class DataFrameTextSearch {
         //initialize build config session
         SparkSession session = SparkSession
                 .builder()
-                .appName("RDDWordCount")
+                .appName("DataFrameTextSearch")
                 //required to run on local machine
                 .config("spark.master", "local")
                 .getOrCreate();
         //run
-        runWordCount(session);
+        runTextSearch(session);
+        session.close();
     }
 
     //encapsulate main function
-    private static void runWordCount(SparkSession session){
+    private static void runTextSearch(SparkSession session){
         //obtain javasparkcontext from session in which the file is read into an RDD
         JavaSparkContext jsc = JavaSparkContext.fromSparkContext(session.sparkContext());
         JavaRDD<String> textFile = jsc.textFile(inputURL, 0);
@@ -80,7 +72,5 @@ public class DataFrameTextSearch {
         long errorFooCount = errors.filter(col("line").like("%foo%")).count();
         System.out.println("error count = " + errorFooCount);
 
-        //close session
-        session.stop();
     }
 }
